@@ -125,5 +125,10 @@
       }
     }
   },
-  "defaultProject": "AppFinder"
+  "defaultProject": "AppFinder",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

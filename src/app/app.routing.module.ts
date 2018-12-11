@@ -7,8 +7,10 @@ import { homeRoutes } from './home/home.routing.module';
 
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', children: homeRoutes },
+    { path: 'games', loadChildren: '../games/games.module#GamesModule' },
+    { path: '**', redirectTo: 'home' }
   ];
 
 

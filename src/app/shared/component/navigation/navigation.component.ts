@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  links: string[];
+  constructor() {
+    this.links = [];
+   }
 
   ngOnInit() {
+    this.links.push('games');
   }
 
 }
