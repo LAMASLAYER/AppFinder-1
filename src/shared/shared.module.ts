@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigationComponent } from './component/navigation/navigation.component';
-import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { ShareComponents } from './components';
+import { ConnexionService } from './services/connexion-service.service';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule
   ],
-  declarations: [NavigationComponent, FooterComponent],
+  declarations: [
+    ...ShareComponents
+    ],
   exports: [
-    NavigationComponent,
-    FooterComponent
+    ...ShareComponents
+  ],
+  providers: [
+    ConnexionService
   ]
 
 })

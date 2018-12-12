@@ -1,3 +1,11 @@
-<p>
-  single-character works!
-</p>
+
+<h1 *ngIf="wait">
+  Wait for it…
+</h1>
+
+<div *ngIf="!wait">
+  <h1>In real it goes faster… I slow it volontary =)</h1>
+  {{ characterString }}
+</div>
+
+<button (click)="backHome()" >Back Home</button>

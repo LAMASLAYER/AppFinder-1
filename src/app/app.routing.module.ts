@@ -10,6 +10,7 @@ export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', children: homeRoutes },
     { path: 'games', loadChildren: '../games/games.module#GamesModule' },
+    { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
     { path: '**', redirectTo: 'home' }
   ];
 
